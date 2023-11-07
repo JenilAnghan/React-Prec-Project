@@ -1,6 +1,6 @@
 import "./App.css";
 import Class from "./Components/Components_structure/Class/Class";
-import Function from "./Components/Components_structure]/Function/Function";
+import Function from "./Components/Components_structure/Function/Function";
 import Cards from "./Components/Props/Cards";
 import Cards1 from "./Components/Props/Cards1";
 import Classprops from "./Components/Props/Class/Classprops";
