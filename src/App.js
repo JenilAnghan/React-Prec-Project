@@ -18,7 +18,7 @@ function App() {
       {/* <Cards data={{name:"jenil", greeting:"Good morning"}}/> */}
       {/* <Cards1/> */}
       {/* <Usestate /> */}
-      <Lifecyclemethod/>
+      <Lifecyclemethod />
     </>
   );
 }
