@@ -5,6 +5,7 @@ import React, {
   componentDidUpdate,
   count,
 } from "react";
+import Unmount from "./Unmount";
 
 export default class Lifecyclemethod extends Component {
   constructor() {
@@ -27,6 +28,10 @@ export default class Lifecyclemethod extends Component {
     console.log("----------render----------", render);
     return (
       <>
+      {
+        this.state.count < 5 ?
+        <Unmount/>: null
+      }
         <div>LifeCycleMethod</div>
         <h1>Count is {this.state.count}</h1>
         <button
