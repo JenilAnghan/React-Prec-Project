@@ -22,7 +22,7 @@ function App() {
       {/* <Usestate /> */}
       {/* <Lifecyclemethod /> */}
       {/* <Unmount/> */}
-      <Lifepro/>
+      <Lifepro />
     </>
   );
 }
