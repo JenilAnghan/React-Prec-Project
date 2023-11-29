@@ -8,6 +8,7 @@ import Cards from "./Components/Props/Cards";
 import Cards1 from "./Components/Props/Cards1";
 import Classprops from "./Components/Props/Class/Classprops";
 import Functionprops from "./Components/Props/Function/Functionprops";
+import UseEfectCom from "./Components/Usestate/UseEfectCom";
 import Usestate from "./Components/Usestate/Usestate";
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
       {/* <Usestate /> */}
       {/* <Lifecyclemethod /> */}
       {/* <Unmount/> */}
-      <Lifepro />
+      {/* <Lifepro /> */}
+      <UseEfectCom/>
     </>
   );
 }
