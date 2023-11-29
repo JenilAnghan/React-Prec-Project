@@ -11,7 +11,7 @@ export default function UseEfectCom() {
   return (<>
     <div>
       <h1>USESTATE</h1>
-      <button color="danger" onClick={()=> }>INC-COUNT</button>
+      <button color="danger" onClick={()=>  }>INC-COUNT</button>
     </div>
     </>
   )
