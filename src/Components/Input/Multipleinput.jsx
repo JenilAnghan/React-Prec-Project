@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Multipleuser() {
+export default function Multipleinput() {
   return (
     <div>
       
