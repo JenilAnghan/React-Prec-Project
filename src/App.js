@@ -15,6 +15,7 @@ import UseEfectCom from "./Components/Usestate/UseEfectCom";
 import UseEfreectProject from "./Components/Usestate/UseEfectProject";
 import Usestate from "./Components/Usestate/Usestate";
 import SingleInputrev from "./Components/Input/SingleInputrev";
+import Multipleinput from "./Components/Input/Multipleinput";
 
 function App() {
   return (
@@ -31,9 +32,9 @@ function App() {
       {/* <Lifepro /> */}
       {/* <UseEfectCom/> */}
       {/* <UseEfreectProject/> */}
-      <Singleinput/>
-    <SingleInputrev/>
-
+      {/* <Singleinput/> */}
+      {/* <SingleInputrev/> */}
+      <Multipleinput />
 
       <ToastContainer />
     </>
