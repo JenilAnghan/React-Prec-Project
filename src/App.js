@@ -3,7 +3,6 @@ import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Class from "./Components/Components_structure/Class/Class";
 import Function from "./Components/Components_structure/Function/Function";
-import PrecticeCreateInput from "./Components/Input/PrecticeCreateInput";
 import Singleinput from "./Components/Input/Singleinput";
 import Lifecyclemethod from "./Components/LifeCycleMethod/Lifecyclemethod";
 import Lifepro from "./Components/LifeCycleMethod/Lifepro";
@@ -33,7 +32,6 @@ function App() {
       {/* <UseEfectCom/> */}
       {/* <UseEfreectProject/> */}
       <Singleinput/>
-      {/* <PrecticeCreateInput/> */}
     <SingleInputrev/>
 
 
