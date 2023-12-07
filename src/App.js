@@ -20,21 +20,23 @@ import Multipleinput from "./Components/Input/Multipleinput";
 function App() {
   return (
     <>
-      {/* <Class/> */}
-      {/* <Function/> */}
-      {/* <Classprops/> */}
-      {/* <Functionprops/> */}
-      {/* <Cards data={{name:"jenil", greeting:"Good morning"}}/> */}
-      {/* <Cards1/> */}
-      {/* <Usestate /> */}
-      {/* <Lifecyclemethod /> */}
-      {/* <Unmount/> */}
-      {/* <Lifepro /> */}
-      {/* <UseEfectCom/> */}
-      {/* <UseEfreectProject/> */}
-      {/* <Singleinput/> */}
-      {/* <SingleInputrev/> */}
-      <Multipleinput />
+      <div className="appContainer">
+        {/* <Class/> */}
+        {/* <Function/> */}
+        {/* <Classprops/> */}
+        {/* <Functionprops/> */}
+        {/* <Cards data={{name:"jenil", greeting:"Good morning"}}/> */}
+        {/* <Cards1/> */}
+        {/* <Usestate /> */}
+        {/* <Lifecyclemethod /> */}
+        {/* <Unmount/> */}
+        {/* <Lifepro /> */}
+        {/* <UseEfectCom/> */}
+        {/* <UseEfreectProject/> */}
+        {/* <Singleinput/> */}
+        {/* <SingleInputrev/> */}
+        <Multipleinput />
+      </div>
 
       <ToastContainer />
     </>
