@@ -19,19 +19,27 @@ export default function Multipleinput() {
   let [alluser, setalluser] = useState([]);
 
   const adddata = (e) => {
-    if (user.email.length > 0 && user.password.length > 0) {
+    if (user?.email?.length > 0 && user?.password?.length > 0) {
       e.preventDefault();
       setalluser([...alluser, user]);
+      setuser({
+        email: "",
+        password: "",
+      });
       toast.success("User Added Successfully");
     } else {
       toast.error("Please Fill Data");
     }
   };
 
+  const deleteHandler = (index) => {
+    // console.log("-----");
+    // alluser.splice(index, 1);
+    // setuser([...alluser])
 
-  const deleteHandler = (e)=>{
-    console.log("-----");
-  }
+    let filterdata = alluser.filter((e, i) => i !== index);
+    setalluser([...filterdata]);
+  };
   return (
     <>
       <div>
@@ -39,6 +47,7 @@ export default function Multipleinput() {
           <FormGroup>
             <Label for="exampleEmail">Email</Label>
             <Input
+              value={user?.email}
               id="exampleEmail"
               name="email"
               placeholder="Enter Your Email"
@@ -50,6 +59,7 @@ export default function Multipleinput() {
           <FormGroup>
             <Label for="examplePassword">Password</Label>
             <Input
+              value={user?.password}
               id="examplePassword"
               name="password"
               placeholder="Enter Your Password"
@@ -82,19 +92,17 @@ export default function Multipleinput() {
                   <td>{e.password}</td>
                   <td>
                     <Button className="w-100" color="danger">
-                      {" "}
-                      edit{" "}
+                      edit
                     </Button>
                   </td>
 
                   <td>
                     <Button
-                      onClick={() => deleteHandler()}
+                      onClick={() => deleteHandler(i)}
                       className="w-100"
                       color="danger"
                     >
-                      {" "}
-                      delete{" "}
+                      delete
                     </Button>
                   </td>
                 </tr>

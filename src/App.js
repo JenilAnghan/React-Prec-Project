@@ -37,7 +37,7 @@ function App() {
         {/* <Singleinput/> */}
         {/* <SingleInputrev/> */}
         {/* <Multipleinput /> */}
-        <Multipledelete/>
+        <Multipledelete />
       </div>
 
       <ToastContainer />
