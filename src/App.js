@@ -16,6 +16,7 @@ import UseEfreectProject from "./Components/Usestate/UseEfectProject";
 import Usestate from "./Components/Usestate/Usestate";
 import SingleInputrev from "./Components/Input/SingleInputrev";
 import Multipleinput from "./Components/Input/Multipleinput";
+import Multipledelete from "./Components/Input/Multipledelete";
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
         {/* <UseEfreectProject/> */}
         {/* <Singleinput/> */}
         {/* <SingleInputrev/> */}
-        <Multipleinput />
+        {/* <Multipleinput /> */}
+        <Multipledelete/>
       </div>
 
       <ToastContainer />

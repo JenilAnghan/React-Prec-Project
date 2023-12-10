@@ -17,10 +17,6 @@ export default function Multipleinput() {
   });
 
   let [alluser, setalluser] = useState([]);
-  // {
-  //   email:"test@gmail.com"
-  //   password:"123456789"
-  // }
 
   const adddata = (e) => {
     if (user.email.length > 0 && user.password.length > 0) {
@@ -31,11 +27,14 @@ export default function Multipleinput() {
       toast.error("Please Fill Data");
     }
   };
+
+
+  const deleteHandler = (e)=>{
+    console.log("-----");
+  }
   return (
     <>
       <div>
-        {/* <h1>{user.email}</h1> */}
-        {/* <h1>{user.password}</h1>   */}
         <Form className="border border-dark p-3 rounded-3">
           <FormGroup>
             <Label for="exampleEmail">Email</Label>
@@ -62,7 +61,6 @@ export default function Multipleinput() {
           <Button className="w-100" color="danger" onClick={(e) => adddata(e)}>
             Submit
           </Button>
-
         </Form>
 
         <Table striped>
@@ -82,13 +80,26 @@ export default function Multipleinput() {
                   <th scope="row">{i + 1}</th>
                   <td>{e.email}</td>
                   <td>{e.password}</td>
-                  <td><Button className="w-100" color="danger"> edit </Button></td>
+                  <td>
+                    <Button className="w-100" color="danger">
+                      {" "}
+                      edit{" "}
+                    </Button>
+                  </td>
 
-                  <td><Button className="w-100" color="danger"> delete </Button></td>
+                  <td>
+                    <Button
+                      onClick={() => deleteHandler()}
+                      className="w-100"
+                      color="danger"
+                    >
+                      {" "}
+                      delete{" "}
+                    </Button>
+                  </td>
                 </tr>
               );
             })}
-
           </tbody>
         </Table>
       </div>
