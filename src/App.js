@@ -17,6 +17,7 @@ import Usestate from "./Components/Usestate/Usestate";
 import SingleInputrev from "./Components/Input/SingleInputrev";
 import Multipleinput from "./Components/Input/Multipleinput";
 import Multipledelete from "./Components/Input/Multipledelete";
+import Multipleupdate from "./Components/Input/Multipleupdate";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
         {/* <Singleinput/> */}
         {/* <SingleInputrev/> */}
         {/* <Multipleinput /> */}
-        <Multipledelete />
+        {/* <Multipledelete /> */}
+        <Multipleupdate />
       </div>
 
       <ToastContainer />
