@@ -15,7 +15,7 @@ export default function Multipleupdate() {
     email: "",
     password: "",
   });
-  let [index, setIndex] = useState(null)
+  let [index, setIndex] = useState(null);
   let [alluser, setalluser] = useState([]);
 
   const adddata = (e) => {
@@ -41,12 +41,22 @@ export default function Multipleupdate() {
     setalluser([...filterdata]);
   };
 
-
-  const updateDate = ()=>{
-    alluser.splice(index,1,user)
-  }
+  const updateDate = () => {
+    if (index || index === 0) {
+      alluser.splice(index, 1, user);
+      setuser([...alluser]);
+      setuser({
+        email: "",
+        password: "",
+      });
+      setIndex(null);
+    } else {
+      toast("Please Select Data");
+    }
+  };
   const updateHandler = (data, index) => {
     setuser(data);
+    setIndex(index);
   };
   return (
     <>
@@ -76,13 +86,19 @@ export default function Multipleupdate() {
             />
           </FormGroup>
 
-          <Button className="w-100" color="danger" onClick={(e) => adddata(e)}>
-            Submit
-          </Button>
-
-          <Button className="w-100 mt-3" color="danger">
-            Update
-          </Button>
+          {index || index === 0 ? (
+            <Button className="w-100 mt-3" color="danger" onClick={updateDate}>
+              Update
+            </Button>
+          ) : (
+            <Button
+              className="w-100"
+              color="danger"
+              onClick={(e) => adddata(e)}
+            >
+              Submit
+            </Button>
+          )}
         </Form>
 
         <Table striped>

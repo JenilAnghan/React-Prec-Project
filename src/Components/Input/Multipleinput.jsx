@@ -62,7 +62,6 @@ export default function Multipleinput() {
           <Button className="w-100" color="danger" onClick={(e) => adddata(e)}>
             Submit
           </Button>
-
         </Form>
 
         <Table striped>
@@ -82,13 +81,22 @@ export default function Multipleinput() {
                   <th scope="row">{i + 1}</th>
                   <td>{e.email}</td>
                   <td>{e.password}</td>
-                  <td><Button className="w-100" color="danger"> edit </Button></td>
+                  <td>
+                    <Button className="w-100" color="danger">
+                      {" "}
+                      edit{" "}
+                    </Button>
+                  </td>
 
-                  <td><Button className="w-100" color="danger"> delete </Button></td>
+                  <td>
+                    <Button className="w-100" color="danger">
+                      {" "}
+                      delete{" "}
+                    </Button>
+                  </td>
                 </tr>
               );
             })}
-
           </tbody>
         </Table>
       </div>
