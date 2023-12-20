@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ComB2 from "./ComB2";
+import ComB3 from "./ComB3";
 
-export default function ComB() {
+export default function ComB({ name }) {
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      <ComB2 name2={name} />
+      <ComB3 />
+    </>
+  );
 }
