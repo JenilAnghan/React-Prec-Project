@@ -18,6 +18,8 @@ import SingleInputrev from "./Components/Input/SingleInputrev";
 import Multipleinput from "./Components/Input/Multipleinput";
 import Multipledelete from "./Components/Input/Multipledelete";
 import Multipleupdate from "./Components/Input/Multipleupdate";
+import Inputtry from "./Components/Input/Inputtry";
+import ComA from "./Components/Hook/UseContaxt2/ComA";
 
 function App() {
   return (
@@ -39,7 +41,9 @@ function App() {
         {/* <SingleInputrev/> */}
         {/* <Multipleinput /> */}
         {/* <Multipledelete /> */}
-        <Multipleupdate />
+        {/* <Multipleupdate /> */}
+          {/* <Inputtry/>  */}
+          <ComA/>
       </div>
 
       <ToastContainer />
