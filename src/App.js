@@ -20,6 +20,7 @@ import Multipledelete from "./Components/Input/Multipledelete";
 import Multipleupdate from "./Components/Input/Multipleupdate";
 import ComA from "./Components/Hook/UseContaxt2/ComA";
 import UseMainContaxt from "./Components/Hook/UseContaxt2/UseMainContaxt";
+import UseReducercom from "./Components/Hook/UseReducer/UseReducercom";
 
 function App() {
   return (
@@ -42,8 +43,9 @@ function App() {
         {/* <Multipleinput /> */}
         {/* <Multipledelete /> */}
         {/* <Multipleupdate /> */}
-          {/* <ComA/> */}
-          <UseMainContaxt/>
+        {/* <ComA/> */}
+        {/* <UseMainContaxt/> */}
+        <UseReducercom />
       </div>
 
       <ToastContainer />
