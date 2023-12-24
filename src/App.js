@@ -21,6 +21,8 @@ import Multipleupdate from "./Components/Input/Multipleupdate";
 import ComA from "./Components/Hook/UseContaxt2/ComA";
 import UseMainContaxt from "./Components/Hook/UseContaxt2/UseMainContaxt";
 import UseReducercom from "./Components/Hook/UseReducer/UseReducercom";
+import Presa from "./Components/Input/Presa";
+import Router from "./Components/Routers/Router";
 
 function App() {
   return (
@@ -45,8 +47,11 @@ function App() {
         {/* <Multipleupdate /> */}
         {/* <ComA/> */}
         {/* <UseMainContaxt/> */}
-        <UseReducercom />
+        {/* <UseReducercom /> */}
+        {/* <Presa/> */}
+        <Router/>
       </div>
+
 
       <ToastContainer />
     </>
