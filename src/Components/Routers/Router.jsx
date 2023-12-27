@@ -6,14 +6,17 @@ import Error404 from "./Error404";
 import Header from "./Header";
 import Headerrs from "./Headerrs";
 import About from "./About";
-import service from "./Service/service";
-
+import service from "./service/Service";
+import Bikeservice from "./service/Bikeservice";
+import Carservice from "./service/Carservice";
+import Sportsbike from "./service/Bike/Sportsbike";
+import Normalbike from "./service/Bike/Normalbike";
 export default function router() {
   return (
     <>
       <BrowserRouter>
-    {/* <Header/> */}
-    <Headerrs/>
+        {/* <Header/> */}
+        <Headerrs />
         <div
           style={{
             width: "100vw",
@@ -25,12 +28,18 @@ export default function router() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Error404 />} />
             <Route path="/about" element={<About />} />
-            <Route path="/service" Component={service}/>
+            <Route path="/service">
+              <Route index Component={service} />
 
-
-
+              <Route path="car" Component={Carservice} />
+              <Route path="bike">
+                <Route index Component={Bikeservice} />
+                <Route path="sports" element={<Sportsbike />} />
+                <Route path="normal" element={<Normalbike />} />
+              </Route>
+            </Route>
+            <Route path="*" element={<Error404 />} />
 
             {/* <Home/>
         <Contact/> */}
