@@ -6,6 +6,7 @@ import Error404 from "./Error404";
 import Header from "./Header";
 import Headerrs from "./Headerrs";
 import About from "./About";
+import service from "./Service/service";
 
 export default function router() {
   return (
@@ -26,6 +27,7 @@ export default function router() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Error404 />} />
             <Route path="/about" element={<About />} />
+            <Route path="/service" Component={service}/>
 
 
 
