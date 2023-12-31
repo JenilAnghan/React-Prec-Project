@@ -1,7 +1,13 @@
 import React from "react";
 import Home from "./Home";
 import Contact from "./Contact";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useSearchParams,
+} from "react-router-dom";
 import Error404 from "./Error404";
 import Header from "./Header";
 import Headerrs from "./Headerrs";
@@ -12,6 +18,7 @@ import Carservice from "./service/Carservice";
 import Sportsbike from "./service/Bike/Sportsbike";
 import Normalbike from "./service/Bike/Normalbike";
 import User from "./User";
+import Profilepage from "./Profilepage";
 export default function router() {
   return (
     <>
@@ -41,7 +48,9 @@ export default function router() {
               </Route>
             </Route>
             <Route path="*" element={<Error404 />} />
-            <Route path="/user" element={<User />} />
+            <Route path="/user/:name" element={<User />} />
+            <Route path="/profilepage" element={<Profilepage />} />
+
 
             {/* <Home/>
         <Contact/> */}

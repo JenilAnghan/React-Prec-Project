@@ -31,6 +31,9 @@ function HeaderRS(args) {
           <NavItem>
             <NavLink to="/contact">Contact Us</NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink to="/profilepage">Profile</NavLink>
+          </NavItem>
         </Nav>
       </Navbar>
     </div>
