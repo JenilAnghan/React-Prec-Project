@@ -16,25 +16,45 @@ function HeaderRS(args) {
 
   return (
     <div>
-      <Navbar style={{ width: "100vw" }} {...args}>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto gap-3" navbar>
-            <NavItem>
-              <NavLink to="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/service">Service</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/contact">Contact Us</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
+      <Navbar {...args}>
+        <NavbarBrand className="ps-0" href="/">
+          reactstrap
+        </NavbarBrand>
+
+        <Nav className="me-auto gap-3">
+          <NavItem>
+            <NavLink to="/">Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/service">Service</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/contact">Contact Us</NavLink>
+          </NavItem>
+        </Nav>
       </Navbar>
     </div>
   );
 }
 
 export default HeaderRS;
+
+// <div>
+// <Navbar style={{ width: "100vw" }} {...args}>
+//   <NavbarBrand href="/">reactstrap</NavbarBrand>
+//   <NavbarToggler onClick={toggle} />
+//   <Collapse isOpen={isOpen} navbar>
+//     <Nav className="me-auto gap-3" navbar>
+//       <NavItem>
+//         <NavLink to="/">Home</NavLink>
+//       </NavItem>
+//       <NavItem>
+//         <NavLink to="/service">Service</NavLink>
+//       </NavItem>
+//       <NavItem>
+//         <NavLink to="/contact">Contact Us</NavLink>
+//       </NavItem>
+//     </Nav>
+//   </Collapse>
+// </Navbar>
+// </div>

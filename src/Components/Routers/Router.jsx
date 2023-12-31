@@ -11,6 +11,7 @@ import Bikeservice from "./service/Bikeservice";
 import Carservice from "./service/Carservice";
 import Sportsbike from "./service/Bike/Sportsbike";
 import Normalbike from "./service/Bike/Normalbike";
+import User from "./User";
 export default function router() {
   return (
     <>
@@ -40,6 +41,7 @@ export default function router() {
               </Route>
             </Route>
             <Route path="*" element={<Error404 />} />
+            <Route path="/user" element={<User />} />
 
             {/* <Home/>
         <Contact/> */}

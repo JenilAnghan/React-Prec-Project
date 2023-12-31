@@ -1,5 +1,25 @@
 import React from "react";
+import { useNavigate } from "react-router";
+import { Button } from "reactstrap";
 
 export default function Home() {
-  return <div>Home</div>;
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="d-flex flex-column">
+        <h1>Home</h1>
+
+        <ul>
+          <li role="button" onClick={() => navigate("/user")}>
+            Jenil
+          </li>
+
+          <li role="button" onClick={() => navigate("/user")}>
+            Nikunj
+          </li>
+        </ul>
+        <Button onClick={() => navigate(-1)}>Go Back</Button>
+      </div>
+    </>
+  );
 }
