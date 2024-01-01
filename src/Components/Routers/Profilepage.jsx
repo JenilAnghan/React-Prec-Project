@@ -1,19 +1,27 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
+} from "reactstrap";
 
-export default function Profile(args) {
-  const navigate = useNavigate()
-  const [modal, setModal] = useState(false);
+// const navigate = useNavigate()
+// const [modal, setModal] = Usestate(false);
 
-  const toggle = () => setModal(!modal);
-
+// const toggle = () => setModal(!modal);
+export default function Profile(modal, toggle) {
+  const [paramsData] = useSearchParams();
   return (
     <div>
-      <Button color="danger" onClick={toggle}>
-        Click Me
-      </Button>
-      <Modal isOpen={modal} toggle={toggle} {...args}>
+      <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>
           <Form>
@@ -35,25 +43,22 @@ export default function Profile(args) {
                 type="password"
               />
             </FormGroup>
-           
-           
+
             <FormGroup>
               <Label for="exampleText">Text Area</Label>
               <Input id="exampleText" name="text" type="textarea" />
             </FormGroup>
-        
-         
-          
+
             <Button>Submit</Button>
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>
+          {/* <Button color="primary" onClick={toggle}>
             Do Something
           </Button>{" "}
           <Button color="secondary" onClick={toggle}>
             Cancel
-          </Button>
+          </Button> */}
         </ModalFooter>
       </Modal>
     </div>

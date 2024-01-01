@@ -1,6 +1,11 @@
 import { Eye } from "lucide-react";
 import React, { useState } from "react";
-import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Navigate,
+  useNavigate,
+  useSearchParams,
+  toggle,
+} from "react-router-dom";
 import { Table } from "reactstrap";
 import Profile from "./Profilepage";
 
@@ -46,7 +51,7 @@ export default function Contact() {
                 <td>{e?.city}</td>
 
                 <td>
-                  <Eye role="button" color="#9ba0a8" />
+                  <Eye onClick={toggle} role="button" color="#9ba0a8" />
                 </td>
               </tr>
             );
