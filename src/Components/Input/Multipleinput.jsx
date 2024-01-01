@@ -83,8 +83,7 @@ export default function Multipleinput() {
                   <td>{e.password}</td>
                   <td>
                     <Button className="w-100" color="danger">
-                      {" "}
-                      edit{" "}
+                      edit
                     </Button>
                   </td>
 

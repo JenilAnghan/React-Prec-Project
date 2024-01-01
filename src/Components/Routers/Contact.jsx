@@ -1,7 +1,8 @@
 import { Eye } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import { Table } from "reactstrap";
+import Profile from "./Profilepage";
 
 const users = [
   { name: "jenil", age: 21, city: "surat" },
@@ -10,19 +11,21 @@ const users = [
 ];
 
 export default function Contact() {
+  // const [searchParames, setSearchParames] = useSearchParams()
+  const navigate = useNavigate();
 
-  const [searchParames, setSearchParames] = useSearchParams()
-   const navigate = useNavigate()
+  const [modal, setModal] = useState(false);
 
-const setData = () =>{
+  const toggle = () => setModal(!modal);
 
-  setSearchParames({name:"jenil", city :"surat"})
-  navigate("/profilepage?name=jenil&age=21&city=surat")
-}
-
+  const setData = () => {
+    // setSearchParames({name:"jenil", city :"surat"})
+    navigate("/profilepage?name=jenil&age=21&city=surat");
+  };
 
   return (
     <>
+      <Profile toggle={toggle} modal={modal} />
       <Table className="me-5 ms-5" striped>
         <thead>
           <tr>
@@ -43,8 +46,7 @@ const setData = () =>{
                 <td>{e?.city}</td>
 
                 <td>
-                  <Eye onClick={setData}
-                  role="button" color="#9ba0a8"/>
+                  <Eye role="button" color="#9ba0a8" />
                 </td>
               </tr>
             );

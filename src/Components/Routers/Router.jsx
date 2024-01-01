@@ -49,8 +49,7 @@ export default function router() {
             </Route>
             <Route path="*" element={<Error404 />} />
             <Route path="/user/:name" element={<User />} />
-            <Route path="/profilepage" element={<Profilepage />} />
-
+            
 
             {/* <Home/>
         <Contact/> */}
