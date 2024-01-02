@@ -23,6 +23,9 @@ import UseMainContaxt from "./Components/Hook/UseContaxt2/UseMainContaxt";
 import UseReducercom from "./Components/Hook/UseReducer/UseReducercom";
 import Presa from "./Components/Input/Presa";
 import Router from "./Components/Routers/Router";
+import ProtectedRoter from "./Components/ProtectedRouter/Router/Router";
+import AppPro from "./Components/ProtectedRouter/ui/Pages/AppPro";
+import RouterSimple from "./Components/Protec-2/Router";
 
 function App() {
   return (
@@ -49,7 +52,12 @@ function App() {
         {/* <UseMainContaxt/> */}
         {/* <UseReducercom /> */}
         {/* <Presa/> */}
-        <Router/>
+        {/* <Router/> */}
+        {/* <ProtectedRoter/> */}
+        <AppPro/> 
+        {/* <RouterSimple/> */}
+
+          
       </div>
 
 

@@ -26,34 +26,25 @@ export default function Profile({ modal, toggle }) {
         <ModalBody>
           <Form>
             <FormGroup>
-              <Label for="exampleEmail">Email</Label>
+              <Label>Email</Label>
               <Input
-                id="exampleEmail"
                 value={paramsData.get("name")}
                 disabled={true}
-                name="email"
-                placeholder="with a placeholder"
-                type="email"
+                placeholder="Name"
               />
             </FormGroup>
             <FormGroup>
-              <Label for="examplePassword">Password</Label>
+              <Label>Password</Label>
               <Input
-                id="examplePassword"
                 value={paramsData.get("age")}
                 disabled={true}
-                name="password"
-                placeholder="password placeholder"
-                type="password"
+                placeholder="Age"
               />
             </FormGroup>
 
-            <FormGroup>
-              <Label for="exampleText">Text Area</Label>
-              <Input id="exampleText" name="text" type="textarea" />
-            </FormGroup>
-
-            <Button>Submit</Button>
+            <Button color="danger" className="w-100">
+              Submit
+            </Button>
           </Form>
         </ModalBody>
       </Modal>

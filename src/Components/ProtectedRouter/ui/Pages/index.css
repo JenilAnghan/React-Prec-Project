@@ -1,0 +1,15 @@
+ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+
+.active {
+  color: red;
+  font-weight: bold;
+}
