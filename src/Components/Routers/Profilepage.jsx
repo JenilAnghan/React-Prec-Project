@@ -17,7 +17,7 @@ import {
 // const [modal, setModal] = Usestate(false);
 
 // const toggle = () => setModal(!modal);
-export default function Profile(modal, toggle) {
+export default function Profile({ modal, toggle }) {
   const [paramsData] = useSearchParams();
   return (
     <div>
@@ -29,6 +29,8 @@ export default function Profile(modal, toggle) {
               <Label for="exampleEmail">Email</Label>
               <Input
                 id="exampleEmail"
+                value={paramsData.get("name")}
+                disabled={true}
                 name="email"
                 placeholder="with a placeholder"
                 type="email"
@@ -38,6 +40,8 @@ export default function Profile(modal, toggle) {
               <Label for="examplePassword">Password</Label>
               <Input
                 id="examplePassword"
+                value={paramsData.get("age")}
+                disabled={true}
                 name="password"
                 placeholder="password placeholder"
                 type="password"
@@ -52,14 +56,6 @@ export default function Profile(modal, toggle) {
             <Button>Submit</Button>
           </Form>
         </ModalBody>
-        <ModalFooter>
-          {/* <Button color="primary" onClick={toggle}>
-            Do Something
-          </Button>{" "}
-          <Button color="secondary" onClick={toggle}>
-            Cancel
-          </Button> */}
-        </ModalFooter>
       </Modal>
     </div>
   );
