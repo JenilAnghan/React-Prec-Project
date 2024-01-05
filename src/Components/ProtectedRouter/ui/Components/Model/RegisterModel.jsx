@@ -11,9 +11,10 @@ import {
   FormText,
   Form,
 } from "reactstrap";
+import Select from "react-select";
 export default function RegisterModel({ modal, toggle }) {
   return (
-    <div>
+    <>
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>
@@ -37,39 +38,52 @@ export default function RegisterModel({ modal, toggle }) {
               />
             </FormGroup>
 
-            <FormGroup tag="fieldset">
-              <legend>Radio Buttons</legend>
+            <Label>Gender</Label>
+            <FormGroup tag="fieldset" className="d-flex gap-3">
               <FormGroup check>
                 <Input name="radio1" type="radio" />
-                <Label check>
-                  Option one is this and that—be sure to include why it‘s great
-                </Label>
+                <Label check>Male </Label>
               </FormGroup>
               <FormGroup check>
                 <Input name="radio1" type="radio" />
-                <Label check>
-                  Option two can be something else and selecting it will
-                  deselect option one
-                </Label>
+                <Label check>Female</Label>
               </FormGroup>
               <FormGroup check disabled>
-                <Input disabled name="radio1" type="radio" />
-                <Label check>Option three is disabled</Label>
+                <Input name="radio1" type="radio" />
+                <Label check>Kids</Label>
               </FormGroup>
             </FormGroup>
 
-            <Button>Submit</Button>
+            <div>
+              <Label>Hobbes</Label>
+            </div>
+
+            <FormGroup check inline>
+              <Input type="checkbox" />
+              <Label check>Reading</Label>
+            </FormGroup>
+            <FormGroup check inline>
+              <Input type="checkbox" />
+              <Label check>Traveling</Label>
+            </FormGroup>
+
+            <FormGroup check inline>
+              <Input type="checkbox" />
+              <Label check>singing</Label>
+            </FormGroup>
+            <FormGroup check inline>
+              <Input type="checkbox" />
+              <Label check>Sports</Label>
+            </FormGroup>
+
+            <Select />
+
+            <Button color="danger" className="w-100 mt-3">
+              Submit
+            </Button>
           </Form>
         </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={toggle}>
-            Do Something
-          </Button>
-          <Button color="secondary" onClick={toggle}>
-            Cancel
-          </Button>
-        </ModalFooter>
       </Modal>
-    </div>
+    </>
   );
 }
