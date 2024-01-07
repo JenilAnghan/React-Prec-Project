@@ -26,6 +26,7 @@ import Router from "./Components/Routers/Router";
 import ProtectedRoter from "./Components/ProtectedRouter/Router/Router";
 import AppPro from "./Components/ProtectedRouter/ui/Pages/AppPro";
 import RouterSimple from "./Components/Protec-2/Router";
+import MultipleInput from "./Components/Prectice/MultipleInput";
 
 function App() {
   return (
@@ -56,6 +57,11 @@ function App() {
         {/* <ProtectedRoter/> */}
         <AppPro/> 
         {/* <RouterSimple/> */}
+
+
+  {/* ==============  Prectice File  /=================== */}
+        {/* <MultipleInput/> */}
+
 
           
       </div>
