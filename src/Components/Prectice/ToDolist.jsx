@@ -21,11 +21,8 @@ export default function ToDoList() {
 
   // delete todo
   const deleteHandler = (index) => {
-    // console.log("-----------  ans----------->", ans);
-    // if (ans) {
       let arr = pendingTask.filter((e, i) => i !== index);
       setPendingTask(arr);
-    // }
   };
 
   // single done task handler
