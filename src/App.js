@@ -27,6 +27,7 @@ import ProtectedRoter from "./Components/ProtectedRouter/Router/Router";
 import AppPro from "./Components/ProtectedRouter/ui/Pages/AppPro";
 import RouterSimple from "./Components/Protec-2/Router";
 import MultipleInput from "./Components/Prectice/MultipleInput";
+import ToDoList from "./Components/Prectice/ToDolist";
 
 function App() {
   return (
@@ -55,12 +56,13 @@ function App() {
         {/* <Presa/> */}
         {/* <Router/> */}
         {/* <ProtectedRoter/> */}
-        <AppPro/> 
+        {/* <AppPro/>  */}
         {/* <RouterSimple/> */}
 
 
   {/* ==============  Prectice File  /=================== */}
         {/* <MultipleInput/> */}
+        <ToDoList/>
 
 
           

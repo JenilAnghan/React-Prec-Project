@@ -12,6 +12,7 @@ import {
   Form,
 } from "reactstrap";
 import Select from "react-select";
+import { Check } from "lucide-react";
 const userTypeOptions = [
   { value: "user", label: "User" },
   { value: "admin", label: "Admin" },
@@ -27,12 +28,12 @@ export default function RegisterModel({ modal, toggle }) {
   });
 
   const checkBoxXHandler = (item) => {
-    const matchItem = check?.includes(item);
+    const matchItem = Check?.includes(item);
     if (matchItem) {
-      let filter = check?.filter((e) => e !== item);
+      let filter = Check?.filter((e) => e !== item);
       setCheck(filter);
     } else {
-      setCheck([...check, item]);
+      setCheck([...Check, item]);
     }
   };
   return (
