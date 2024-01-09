@@ -21,8 +21,9 @@ export default function ToDoList() {
 
   // delete todo
   const deleteHandler = (index) => {
-      let arr = pendingTask.filter((e, i) => i !== index);
-      setPendingTask(arr);
+    setPendingTask([...pendingTask,doneTask[index]])
+    let arr = doneTask?.filter((e, i) => i !== index);
+    setDoneTask(arr);
   };
 
   // single done task handler
@@ -30,6 +31,12 @@ export default function ToDoList() {
     setDoneTask([...doneTask, pendingTask[index]]);
     let newData = pendingTask?.filter((e, i) => i !== index);
     setPendingTask(newData);
+  };
+
+  const panddingTask = (index) => {
+    setPendingTask([...pendingTask, doneTask[index]]);
+    let newData1 = doneTask?.filter((e, i) => i !== index);
+    setDoneTask(newData1);
   };
 
   return (
@@ -93,7 +100,15 @@ export default function ToDoList() {
                     <li key={i}>
                       {i + 1}. {element}
                     </li>
-                    <Trash3 onClick={() => deleteHandler(i)} color="red" />
+
+                    <div className="d-flex gap-2">
+                      <CheckCircleFill
+                        role="button"
+                        color="red"
+                        onClick={() => panddingTask(i)}
+                      />
+                      <Trash3 color="red" role="button" onClick={() => deleteHandler(i)}  />
+                    </div>
                   </div>
                   <hr />
                 </>

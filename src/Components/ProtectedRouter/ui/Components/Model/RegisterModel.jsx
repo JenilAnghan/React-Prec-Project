@@ -27,7 +27,7 @@ export default function RegisterModel({ modal, toggle }) {
     userType: "",
   });
 
-  const checkBoxXHandler = (item) => {
+  const checkBoxHandler = (item) => {
     const matchItem = Check?.includes(item);
     if (matchItem) {
       let filter = Check?.filter((e) => e !== item);
