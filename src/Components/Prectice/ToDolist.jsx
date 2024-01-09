@@ -21,9 +21,12 @@ export default function ToDoList() {
 
   // delete todo
   const deleteHandler = (index) => {
-    setPendingTask([...pendingTask,doneTask[index]])
-    let arr = doneTask?.filter((e, i) => i !== index);
-    setDoneTask(arr);
+    // setPendingTask([...pendingTask,doneTask[index]])
+    // let arr = pendingTask.filter((e, i) => i !== index);
+    // setDoneTask(arr);
+
+    let arr = pendingTask.filter((e, i) => i !== index);
+    setDoneTask([...arr]);
   };
 
   // single done task handler
@@ -107,7 +110,11 @@ export default function ToDoList() {
                         color="red"
                         onClick={() => panddingTask(i)}
                       />
-                      <Trash3 color="red" role="button" onClick={() => deleteHandler(i)}  />
+                      <Trash3
+                        color="red"
+                        role="button"
+                        onClick={() => deleteHandler(i)}
+                      />
                     </div>
                   </div>
                   <hr />
