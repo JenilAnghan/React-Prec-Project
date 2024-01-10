@@ -60,16 +60,11 @@ function App() {
         {/* <AppPro/>  */}
         {/* <RouterSimple/> */}
 
-
-  {/* ==============  Prectice File  /=================== */}
+        {/* ==============  Prectice File  /=================== */}
         {/* <MultipleInput/> */}
         {/* <ToDoList/> */}
-        <Checkbox/>
-
-
-          
+        <Checkbox />
       </div>
-
 
       <ToastContainer />
     </>

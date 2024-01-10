@@ -57,81 +57,78 @@ export default function MultipleInput() {
         <Button onClick={(e) => addData(e)}>Submit</Button>
       </Form>
 
-
       <div className="d-flex w-100 gap-4 p-4">
-        
-        
-        <div><h1>Panding Task</h1>
-      <Table dark style={{minWidth:"40%"}}>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <div>
-            {user.map((e, i) => {
-              return (
-                <tr>
-                  <th scope="row">{i + 1}</th>
-                  <td>{e.email}</td>
-                  <td>{e.password}</td>
+        <div>
+          <h1>Panding Task</h1>
+          <Table dark style={{ minWidth: "40%" }}>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <div>
+                {user.map((e, i) => {
+                  return (
+                    <tr>
+                      <th scope="row">{i + 1}</th>
+                      <td>{e.email}</td>
+                      <td>{e.password}</td>
 
-                  <td>
-                    <Button
-                      onClick={() => deleteHandler(i)}
-                      className="w-100 danger"
-                    >
-                      Delete
-                    </Button>
-                  </td>
-                </tr>
-              );
-            })}
-          </div>
-        </tbody>
-      </Table>
-      </div>
+                      <td>
+                        <Button
+                          onClick={() => deleteHandler(i)}
+                          className="w-100 danger"
+                        >
+                          Delete
+                        </Button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </div>
+            </tbody>
+          </Table>
+        </div>
 
+        <div>
+          <h1>Done Task</h1>
+          <Table dark style={{ minWidth: "40%" }}>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <div>
+                {doneTask.map((e, i) => {
+                  return (
+                    <tr>
+                      <th scope="row">{i + 1}</th>
+                      <td>{e.email}</td>
+                      <td>{e.password}</td>
 
-<div>
-        <h1>Done Task</h1>
-      <Table dark style={{minWidth:"40%"}}>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <div>
-            {doneTask.map((e, i) => {
-              return (
-                <tr>
-                  <th scope="row">{i + 1}</th>
-                  <td>{e.email}</td>
-                  <td>{e.password}</td>
-
-                  <td>
-                    <Button
-                      onClick={() => deleteHandler(i)}
-                      className="w-100 danger"
-                    >
-                      Delete
-                    </Button>
-                  </td>
-                </tr>
-              );
-            })}
-          </div>
-        </tbody>
-      </Table>
-      </div>
+                      <td>
+                        <Button
+                          onClick={() => deleteHandler(i)}
+                          className="w-100 danger"
+                        >
+                          Delete
+                        </Button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </div>
+            </tbody>
+          </Table>
+        </div>
       </div>
     </>
   );
