@@ -7,6 +7,7 @@ export default function ToDoList() {
   let [task, setTask] = useState("");
   let [pendingTask, setPendingTask] = useState([]);
   let [doneTask, setDoneTask] = useState([]);
+  let [selectIndex, setselectIndex] = useState([]);
 
   const getData = (eleDetails) => {
     let inputValue = eleDetails?.target?.value;
@@ -40,6 +41,16 @@ export default function ToDoList() {
     setPendingTask([...pendingTask, doneTask[index]]);
     let newData1 = doneTask?.filter((e, i) => i !== index);
     setDoneTask(newData1);
+  };
+
+  const selectHandler = (index) => {
+    let available = selectIndex.includes(index);
+    if (available) {
+      let filter = selectIndex?.filter((e) => e !== index);
+      setselectIndex(filter);
+    } else {
+      setselectIndex([...selectIndex, index]);
+    }
   };
 
   return (
@@ -81,6 +92,11 @@ export default function ToDoList() {
                         color="green"
                         onClick={() => doneTaskHandler(i)}
                       />
+                      <Input
+                        onChange={() => selectHandler(i)}
+                        type="checkbox"
+                        checked={selectIndex.includes(i)}
+                      />
                     </div>
                   </div>
                   <hr />
@@ -110,11 +126,14 @@ export default function ToDoList() {
                         color="red"
                         onClick={() => panddingTask(i)}
                       />
+
                       <Trash3
                         color="red"
                         role="button"
                         onClick={() => deleteHandler(i)}
                       />
+
+                      <Input type="checkbox" />
                     </div>
                   </div>
                   <hr />
