@@ -77,6 +77,7 @@ export default function ToDoList() {
           className="border border-dark rounded-2 pe-2 mt-3"
         >
           <h1 className="text-center">Pending Task</h1>
+            {/* <Input className="me-0" type="checkbox"/> */}
           <hr style={{ padding: "5px", backgroundColor: "darkgray" }} />
           <ul>
             {pendingTask.map((element, i) => {
