@@ -59,7 +59,7 @@ export default function Multipleinput() {
             />
           </FormGroup>
 
-          <Button className="w-100" color="danger" onClick={(e) => adddata(e)}>
+          <Button className="w-100" color="danger" onClick={() => adddata()}>
             Submit
           </Button>
         </Form>
